@@ -27,7 +27,7 @@ public class VitalLinkHttpApiHostMigrationsDbContextFactory : IDesignTimeDbConte
     private static IConfigurationRoot BuildConfiguration()
     {
         var builder = new ConfigurationBuilder()
-            .SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../../host/Unseal.HttpApi.Host"))
+            .SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../../host/VitalLink.HttpApi.Host"))
             .AddJsonFile(
                 $"{MultiEnvironmentConstants.AspNetCoreEnvironmentAppSettingFile}{MultiEnvironmentConstants.AspNetCoreEnvironmentExtention}",
                 optional: false)

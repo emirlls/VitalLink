@@ -11,7 +11,7 @@ using Volo.Abp.TenantManagement;
 
 namespace VitalLink.Extensions;
 
-public static class UnsealTableNameProvider
+public static class VitalLinkTableNameProvider
 {
     public static string GetTableName<T>(this EntityTypeBuilder<T> entityTypeBuilder) 
         where T : class
