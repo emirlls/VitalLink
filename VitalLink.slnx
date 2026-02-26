@@ -1,0 +1,30 @@
+<Solution>
+  <Folder Name="/host/">
+    
+    
+    
+    <Project Path="host/VitalLink.Host.Shared/VitalLink.Host.Shared.csproj" />
+    <Project Path="host/VitalLink.HttpApi.Host/VitalLink.HttpApi.Host.csproj" />
+    
+    
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/VitalLink.Application.Contracts/VitalLink.Application.Contracts.csproj" />
+    <Project Path="src/VitalLink.Application/VitalLink.Application.csproj" />
+    
+    
+    <Project Path="src/VitalLink.Domain.Shared/VitalLink.Domain.Shared.csproj" />
+    <Project Path="src/VitalLink.Domain/VitalLink.Domain.csproj" />
+    <Project Path="src/VitalLink.EntityFrameworkCore/VitalLink.EntityFrameworkCore.csproj" />
+    <Project Path="src/VitalLink.HttpApi.Client/VitalLink.HttpApi.Client.csproj" />
+    <Project Path="src/VitalLink.HttpApi/VitalLink.HttpApi.csproj" />
+    
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/VitalLink.Application.Tests/VitalLink.Application.Tests.csproj" />
+    <Project Path="test/VitalLink.Domain.Tests/VitalLink.Domain.Tests.csproj" />
+    <Project Path="test/VitalLink.EntityFrameworkCore.Tests/VitalLink.EntityFrameworkCore.Tests.csproj" />
+    <Project Path="test/VitalLink.HttpApi.Client.ConsoleTestApp/VitalLink.HttpApi.Client.ConsoleTestApp.csproj" />
+    <Project Path="test/VitalLink.TestBase/VitalLink.TestBase.csproj" />
+  </Folder>
+</Solution>

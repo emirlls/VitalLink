@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "VitalLink": {
+      "path": "VitalLink.abpmdl"
+    }
+  }
+}
