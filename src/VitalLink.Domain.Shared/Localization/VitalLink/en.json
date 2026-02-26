@@ -1,0 +1,10 @@
+{
+  "culture": "en",
+  "texts": {
+    "MyAccount":  "My account",
+    "SamplePageMessage": "A sample page for the VitalLink module",
+
+    "VitalLink:ExceptionCodes:UnexpectedException:001": "Unexpected Error.",
+    "VitalLink:ExceptionCodes:Success:001": "Success."
+  }
+}

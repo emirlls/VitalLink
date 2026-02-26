@@ -1,0 +1,79 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "host": {}
+    }
+  },
+  "packages": {
+    "VitalLink.Domain.Shared": {
+      "path": "src/VitalLink.Domain.Shared/VitalLink.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "VitalLink.Domain": {
+      "path": "src/VitalLink.Domain/VitalLink.Domain.abppkg",
+      "folder": "src"
+    },
+    "VitalLink.Application.Contracts": {
+      "path": "src/VitalLink.Application.Contracts/VitalLink.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "VitalLink.Application": {
+      "path": "src/VitalLink.Application/VitalLink.Application.abppkg",
+      "folder": "src"
+    },
+    "VitalLink.EntityFrameworkCore": {
+      "path": "src/VitalLink.EntityFrameworkCore/VitalLink.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "VitalLink.MongoDB": {
+      "path": "src/VitalLink.MongoDB/VitalLink.MongoDB.abppkg",
+      "folder": "src"
+    },
+    "VitalLink.HttpApi": {
+      "path": "src/VitalLink.HttpApi/VitalLink.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "VitalLink.HttpApi.Client": {
+      "path": "src/VitalLink.HttpApi.Client/VitalLink.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "VitalLink.TestBase": {
+      "path": "test/VitalLink.TestBase/VitalLink.TestBase.abppkg",
+      "folder": "test"
+    },
+    "VitalLink.EntityFrameworkCore.Tests": {
+      "path": "test/VitalLink.EntityFrameworkCore.Tests/VitalLink.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "VitalLink.MongoDB.Tests": {
+      "path": "test/VitalLink.MongoDB.Tests/VitalLink.MongoDB.Tests.abppkg",
+      "folder": "test"
+    },
+    "VitalLink.Domain.Tests": {
+      "path": "test/VitalLink.Domain.Tests/VitalLink.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "VitalLink.Application.Tests": {
+      "path": "test/VitalLink.Application.Tests/VitalLink.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "VitalLink.HttpApi.Host": {
+      "path": "host/VitalLink.HttpApi.Host/VitalLink.HttpApi.Host.abppkg",
+      "folder": "host"
+    },
+    "VitalLink.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/VitalLink.HttpApi.Client.ConsoleTestApp/VitalLink.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "VitalLink.AuthServer": {
+      "path": "host/VitalLink.AuthServer/VitalLink.AuthServer.abppkg",
+      "folder": "host"
+    },
+    "VitalLink.Host.Shared": {
+      "path": "host/VitalLink.Host.Shared/VitalLink.Host.Shared.abppkg",
+      "folder": "host"
+    }
+  }
+}
