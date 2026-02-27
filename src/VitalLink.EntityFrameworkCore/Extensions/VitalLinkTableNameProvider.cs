@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using VitalLink.Constants;
+using VitalLink.Entities;
+using VitalLink.Entities.Lookups;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
 using Volo.Abp.OpenIddict;
@@ -22,7 +24,9 @@ public static class VitalLinkTableNameProvider
 
     private static readonly Dictionary<string, string>? TableNames = new()
     {
-        //{nameof(Entity),"Entities"},
+        {nameof(BloodRequest),"BloodRequests"},
+        {nameof(BloodType),"BloodTypes"},
+        {nameof(BloodRequestStatus),"BloodRequestStatuses"},
     };
     
     public static void SetAbpTablePrefix(this ModelBuilder builder)
