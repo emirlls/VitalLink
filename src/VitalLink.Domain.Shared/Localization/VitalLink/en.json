@@ -1,0 +1,25 @@
+{
+  "culture": "en",
+  "texts": {
+    "MyAccount":  "My account",
+    "SamplePageMessage": "A sample page for the VitalLink module",
+
+    "VitalLink:ExceptionCodes:UnexpectedException:001": "Unexpected Error.",
+    "VitalLink:ExceptionCodes:Success:001": "Success.",
+
+    //Enums
+
+    "BloodTypes:00":"A Rh+",
+    "BloodTypes:01":"B Rh+",
+    "BloodTypes:02":"AB Rh+",
+    "BloodTypes:03":"0 Rh+",
+    "BloodTypes:04":"A Rh-",
+    "BloodTypes:05":"B Rh-",
+    "BloodTypes:06":"AB Rh-",
+    "BloodTypes:07":"0 Rh-",
+
+    "BloodRequestStatuses:00": "New",
+    "BloodRequestStatuses:01": "In Progress",
+    "BloodRequestStatuses:02": "Completed"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "culture": "tr",
+  "texts": {
+    "MyAccount":  "Hesabım",
+    "SamplePageMessage": "VitalLink modulünden örnek bir sayfa",
+
+    "VitalLink:ExceptionCodes:UnexpectedException:001": "Beklenmedik hata oluştu.",
+    "VitalLink:ExceptionCodes:Success:001": "İşlem başarıyla tamamlandı.",
+
+    //Enums
+
+    "BloodTypes:00":"A Rh+",
+    "BloodTypes:01":"B Rh+",
+    "BloodTypes:02":"AB Rh+",
+    "BloodTypes:03":"0 Rh+",
+    "BloodTypes:04":"A Rh-",
+    "BloodTypes:05":"B Rh-",
+    "BloodTypes:06":"AB Rh-",
+    "BloodTypes:07":"0 Rh-",
+    
+    "BloodRequestStatuses:00": "Yeni",
+    "BloodRequestStatuses:01": "İşlemde",
+    "BloodRequestStatuses:02": "Tamamlandı"
+  }
+}
