@@ -4,6 +4,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.OpenIddict;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.PermissionManagement.Identity;
+using Volo.Abp.SettingManagement;
 
 namespace VitalLink;
 
@@ -14,7 +15,8 @@ namespace VitalLink;
     typeof(AbpOpenIddictDomainModule),
     typeof(AbpPermissionManagementDomainModule),
     typeof(AbpPermissionManagementDomainIdentityModule),
-    typeof(AbpPermissionManagementDomainModule)
+    typeof(AbpPermissionManagementDomainModule),
+    typeof(AbpSettingManagementDomainModule)
 )]
 public class VitalLinkDomainModule : AbpModule
 {

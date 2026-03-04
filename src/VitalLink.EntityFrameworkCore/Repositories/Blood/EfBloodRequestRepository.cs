@@ -1,4 +1,4 @@
-using VitalLink.Entities;
+using VitalLink.Entities.Bloods;
 using VitalLink.EntityFrameworkCore;
 using VitalLink.Repositories.Base;
 using Volo.Abp.EntityFrameworkCore;

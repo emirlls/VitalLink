@@ -45,7 +45,39 @@ public static class LookupSeeders
                 LookupSeederConstants.BloodTypesConstants.ZeroNegative.Code)
         );
         #endregion
-        
-        //todo : Will add blood request status.
+
+        #region BloodRequestStatuses
+
+        builder.Entity<BloodRequestStatus>().HasData(
+            new BloodRequestStatus(
+                Guid.Parse(LookupSeederConstants.BloodRequestStatusConstants.New.Id),
+                LookupSeederConstants.BloodRequestStatusConstants.New.Name,
+                LookupSeederConstants.BloodRequestStatusConstants.New.Code),
+            new BloodRequestStatus(
+                Guid.Parse(LookupSeederConstants.BloodRequestStatusConstants.InProgress.Id),
+                LookupSeederConstants.BloodRequestStatusConstants.InProgress.Name,
+                LookupSeederConstants.BloodRequestStatusConstants.InProgress.Code),
+            new BloodRequestStatus(
+                Guid.Parse(LookupSeederConstants.BloodRequestStatusConstants.Completed.Id),
+                LookupSeederConstants.BloodRequestStatusConstants.Completed.Name,
+                LookupSeederConstants.BloodRequestStatusConstants.Completed.Code)
+        );
+
+        #endregion
+
+        #region MessageStatuses
+
+        builder.Entity<MessageStatus>().HasData(
+            new MessageStatus(
+                Guid.Parse(LookupSeederConstants.MessageStatusConstants.Sent.Id),
+                LookupSeederConstants.MessageStatusConstants.Sent.Name,
+                LookupSeederConstants.MessageStatusConstants.Sent.Code),
+            new MessageStatus(
+                Guid.Parse(LookupSeederConstants.MessageStatusConstants.Read.Id),
+                LookupSeederConstants.MessageStatusConstants.Read.Name,
+                LookupSeederConstants.MessageStatusConstants.Read.Code)
+        );
+
+        #endregion
     }
 }

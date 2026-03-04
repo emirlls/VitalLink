@@ -20,6 +20,49 @@
     
     "BloodRequestStatuses:00": "Yeni",
     "BloodRequestStatuses:01": "İşlemde",
-    "BloodRequestStatuses:02": "Tamamlandı"
+    "BloodRequestStatuses:02": "Tamamlandı",
+
+    "MessageStatuses:00": "Gönderildi",
+    "MessageStatuses:01": "Okundu",
+
+    "VitalLink:ExceptionCodes:BloodRequests:001": "Kan talebi bulunamadı.",
+    "VitalLink:ExceptionCodes:BloodRequests:002": "Kan talebi zaten mevcut.",
+
+    "VitalLink:ExceptionCodes:BloodTypes:001": "Kan grubu bulunamadı.",
+    "VitalLink:ExceptionCodes:BloodTypes:002": "Kan grubu zaten mevcut.",
+
+    "VitalLink:ExceptionCodes:IdentityUser:001": "Kullanıcı bulunamadı.",
+    "VitalLink:ExceptionCodes:IdentityUser:002": "Kullanıcı zaten mevcut.",
+    "VitalLink:ExceptionCodes:IdentityUser:003": "E-posta adresiniz doğrulanmamıştır.",
+    "VitalLink:ExceptionCodes:IdentityUser:004": "Mail adresi kullanımdadır.",
+    "VitalLink:ExceptionCodes:IdentityUser:005": "Mail adresi geçersizdir.",
+    "VitalLink:ExceptionCodes:IdentityUser:006": "Kullanıcı adı kullanımdadır.",
+
+    "VitalLink:ExceptionCodes:NotificationTemplate:001": "Bildirim şablonu bulunamadı.",
+    "VitalLink:ExceptionCodes:NotificationTemplate:002": "Bildirim şablonu zaten mevcut.",
+
+    "VitalLink:ExceptionCodes:NotificationEventType:001": "Bildirim tipi bulunamadı.",
+    "VitalLink:ExceptionCodes:NotificationEventType:002": "Bildirim tipi zaten mevcut.",
+
+    "VitalLink:ExceptionCodes:Mail:001": "Mail ayarları bulunamadı.",
+
+    "VitalLink:ExceptionCodes:ChatMessage::001": "Mesaj bulunamadı.",
+    "VitalLink:ExceptionCodes:ChatMessage::002": "Mesaj zaten mevcut.",
+
+    "VitalLink:ExceptionCodes:UserProfile:001": "Kullanıcı bulunamadı.",
+    "VitalLink:ExceptionCodes:UserProfile:002": "Kullanıcı zaten mevcut.",
+
+    //Permissions
+    "User.Default": "Kullanıcı İşlemleri",
+    "User.Create": "Kullanıcı Oluşturma",
+    "User.Update": "Kullanıcı Güncelleme",
+    "User.Delete": "Kullanıcı Silme",
+    "User.Export": "Kullanıcı Dışa Aktarım",
+
+    "Message.Default": "Mesaj İşlemleri",
+    "Message.Create": "Mesaj Oluşturma",
+    "Message.Update": "Mesaj Güncelleme",
+    "Message.Delete": "Mesaj Silme",
+    "Message.Export": "Mesaj Dışa Aktarım"
   }
 }

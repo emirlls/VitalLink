@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using VitalLink.Entities.Bloods;
 
 namespace VitalLink.Entities.Lookups;
 
