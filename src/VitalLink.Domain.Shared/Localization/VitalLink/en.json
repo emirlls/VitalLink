@@ -19,8 +19,7 @@
     "BloodTypes:07":"0 Rh-",
 
     "BloodRequestStatuses:00": "New",
-    "BloodRequestStatuses:01": "In Progress",
-    "BloodRequestStatuses:02": "Completed",
+    "BloodRequestStatuses:01": "Completed",
     
     "MessageStatuses:00": "Sent",
     "MessageStatuses:01": "Read",
@@ -50,7 +49,10 @@
     "VitalLink:ExceptionCodes:ChatMessage:002": "Message already exists.",
     
     "VitalLink:ExceptionCodes:UserProfile:001": "User profile not found.",
-    "VitalLink:ExceptionCodes:UserProfile:002": "User profile already exists.", 
+    "VitalLink:ExceptionCodes:UserProfile:002": "User profile already exists.",
+
+    "VitalLink:ExceptionCodes:BloodRequestDonors:001": "Donor not found.",
+    "VitalLink:ExceptionCodes:BloodRequestDonors:002": "Donor already exists.",
     
     //Permissions
     "User.Default": "User Operations",

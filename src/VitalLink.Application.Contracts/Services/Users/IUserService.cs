@@ -13,9 +13,14 @@ public interface IUserService : IApplicationService
         CancellationToken cancellationToken = default
     );
 
+    Task<UserProfileDto> CreateUserProfileAsync(
+        UserProfileCreateDto userProfileCreateDto,
+        CancellationToken cancellationToken = default
+    );
+    
     Task<UserProfileDto> UpdateUserProfileAsync(
         Guid userId,
-        UserProfileUpdateDto userProfileUpdateDto,
+        UserProfileCreateDto userProfileCreateDto,
         CancellationToken cancellationToken = default
     );
 }

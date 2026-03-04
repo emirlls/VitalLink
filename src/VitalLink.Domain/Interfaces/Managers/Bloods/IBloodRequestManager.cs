@@ -15,4 +15,6 @@ public interface IBloodRequestManager : IBaseDomainService<BloodRequest>
         BloodRequest bloodRequest,
         BloodRequestModel bloodRequestModel
     );
+
+    void Close(BloodRequest? bloodRequest);
 }

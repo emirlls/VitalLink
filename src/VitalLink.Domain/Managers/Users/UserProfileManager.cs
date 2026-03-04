@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Extensions.Localization;
 using VitalLink.Constants;
 using VitalLink.Entities.Users;
@@ -12,7 +13,7 @@ public class UserProfileManager : BaseDomainService<UserProfile>, IUserProfileMa
 {
     public UserProfileManager(IBaseRepository<UserProfile> baseRepository,
         IStringLocalizer<VitalLinkResource> stringLocalizer
-        ) : base(
+    ) : base(
         baseRepository,
         stringLocalizer,
         ExceptionCodes.UserProfile.NotFound,
@@ -28,5 +29,22 @@ public class UserProfileManager : BaseDomainService<UserProfile>, IUserProfileMa
         userProfile.Geom = updateModel.Geom;
 
         return userProfile;
+    }
+
+    public UserProfile Create(
+        UserProfileUpdateModel model,
+        Guid currentUserId
+    )
+    {
+        var entity = new UserProfile(
+            GuidGenerator.Create(),
+            CurrentTenant.Id,
+            currentUserId,
+            model.BloodTypeId,
+            model.Radius,
+            model.Geom,
+            DateTime.Now
+        );
+        return entity;
     }
 }

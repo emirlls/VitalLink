@@ -8,7 +8,6 @@ using VitalLink.Constants;
 using VitalLink.Etos;
 using VitalLink.Extensions;
 using VitalLink.Hubs;
-using VitalLink.Interfaces.Managers;
 using VitalLink.Interfaces.Managers.Bloods;
 using VitalLink.Models.Bloods;
 using VitalLink.Repositories.Users;

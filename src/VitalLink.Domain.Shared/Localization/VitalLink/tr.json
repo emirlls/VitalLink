@@ -19,8 +19,7 @@
     "BloodTypes:07":"0 Rh-",
     
     "BloodRequestStatuses:00": "Yeni",
-    "BloodRequestStatuses:01": "İşlemde",
-    "BloodRequestStatuses:02": "Tamamlandı",
+    "BloodRequestStatuses:01": "Tamamlandı",
 
     "MessageStatuses:00": "Gönderildi",
     "MessageStatuses:01": "Okundu",
@@ -52,6 +51,9 @@
     "VitalLink:ExceptionCodes:UserProfile:001": "Kullanıcı bulunamadı.",
     "VitalLink:ExceptionCodes:UserProfile:002": "Kullanıcı zaten mevcut.",
 
+    "VitalLink:ExceptionCodes:BloodRequestDonors:001": "Donör eşleşmesi bulunamadı.",
+    "VitalLink:ExceptionCodes:BloodRequestDonors:002": "Donör eşleşmesi zaten mevcut.",
+    
     //Permissions
     "User.Default": "Kullanıcı İşlemleri",
     "User.Create": "Kullanıcı Oluşturma",

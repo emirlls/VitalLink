@@ -24,13 +24,13 @@ public partial class UserProfileMapper : ITransientDependency
         };
     }
 
-    public UserProfileUpdateModel MapToModel(UserProfileUpdateDto userProfileUpdateDto)
+    public UserProfileUpdateModel MapToModel(UserProfileCreateDto userProfileCreateDto)
     {
         return new UserProfileUpdateModel
         {
-            BloodTypeId = userProfileUpdateDto.BloodTypeId,
-            Radius = userProfileUpdateDto.Radius,
-            Geom = userProfileUpdateDto.GeoJson.ToGeomFromGeoJson()
+            BloodTypeId = userProfileCreateDto.BloodTypeId,
+            Radius = userProfileCreateDto.Radius,
+            Geom = userProfileCreateDto.GeoJson.ToGeomFromGeoJson()
         };
     }
 }

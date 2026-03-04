@@ -21,6 +21,21 @@ public class UserController : VitalLinkController
     {
         _lazyServiceProvider = lazyServiceProvider;
     }
+
+    /// <summary>
+    /// Use to create user profile.
+    /// </summary>
+    /// <param name="userProfileCreateDto"></param>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
+    [HttpPost]
+    public async Task<UserProfileDto> CreateUserProfileAsync(
+        UserProfileCreateDto userProfileCreateDto,
+        CancellationToken cancellationToken = default
+    ) => await UserService.CreateUserProfileAsync(
+        userProfileCreateDto,
+        cancellationToken
+    );
     
     /// <summary>
     /// Use to get user profile.
@@ -41,17 +56,17 @@ public class UserController : VitalLinkController
     /// Use to update user profile.
     /// </summary>
     /// <param name="userId"></param>
-    /// <param name="userProfileUpdateDto"></param>
+    /// <param name="userProfileCreateDto"></param>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
     [HttpPut("{userId}")]
     public async Task<UserProfileDto> UpdateUserProfileAsync(
         Guid userId,
-        UserProfileUpdateDto userProfileUpdateDto,
+        UserProfileCreateDto userProfileCreateDto,
         CancellationToken cancellationToken = default
     ) => await UserService.UpdateUserProfileAsync(
         userId,
-        userProfileUpdateDto,
+        userProfileCreateDto,
         cancellationToken
     );
 

@@ -32,6 +32,7 @@ public class VitalLinkDbContext : AbpDbContext<VitalLinkDbContext>, IVitalLinkDb
     public DbSet<NotificationTemplate>  NotificationTemplates { get; set; }
     public DbSet<ChatMessage>  ChatMessages { get; set; }
     public DbSet<MessageStatus>  MessageStatuses { get; set; }
+    public DbSet<BloodRequestDonors>  BloodRequestDonors { get; set; }
     
     public VitalLinkDbContext(DbContextOptions<VitalLinkDbContext> options)
         : base(options)
