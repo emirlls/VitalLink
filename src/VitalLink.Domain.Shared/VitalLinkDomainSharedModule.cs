@@ -1,4 +1,7 @@
-﻿using Volo.Abp.Modularity;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Localization;
+using VitalLink.Extensions;
+using Volo.Abp.Modularity;
 using Volo.Abp.Localization;
 using VitalLink.Localization;
 using Volo.Abp.Domain;
@@ -34,5 +37,9 @@ public class VitalLinkDomainSharedModule : AbpModule
         {
             options.MapCodeNamespace("VitalLink", typeof(VitalLinkResource));
         });
+        
+        LocalizationExtensions
+            .SetLocalizer(context.Services.BuildServiceProviderFromFactory()
+                .GetRequiredService<IStringLocalizer<VitalLinkResource>>());
     }
 }

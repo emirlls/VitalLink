@@ -1,4 +1,4 @@
-using VitalLink.Entities;
+using VitalLink.Entities.Bloods;
 using VitalLink.Repositories.Base;
 
 namespace VitalLink.Repositories.Blood;

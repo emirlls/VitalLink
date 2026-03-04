@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using VitalLink.Entities;
+using VitalLink.Entities.Bloods;
 using VitalLink.Entities.Lookups;
+using VitalLink.Entities.Messages;
+using VitalLink.Entities.Notifications;
+using VitalLink.Entities.Users;
 using VitalLink.Extensions;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
@@ -23,6 +26,13 @@ public class VitalLinkDbContext : AbpDbContext<VitalLinkDbContext>, IVitalLinkDb
     public DbSet<BloodRequest>  BloodRequests { get; set; }
     public DbSet<BloodRequestStatus>  BloodRequestStatuses { get; set; }
     public DbSet<BloodType>  BloodTypes { get; set; }
+    public DbSet<UserProfile>  UserProfiles { get; set; }
+    public DbSet<Notification>  Notifications { get; set; }
+    public DbSet<NotificationEventType>  NotificationEventTypes { get; set; }
+    public DbSet<NotificationTemplate>  NotificationTemplates { get; set; }
+    public DbSet<ChatMessage>  ChatMessages { get; set; }
+    public DbSet<MessageStatus>  MessageStatuses { get; set; }
+    
     public VitalLinkDbContext(DbContextOptions<VitalLinkDbContext> options)
         : base(options)
     {

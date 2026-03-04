@@ -2,8 +2,11 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using VitalLink.Constants;
-using VitalLink.Entities;
+using VitalLink.Entities.Bloods;
 using VitalLink.Entities.Lookups;
+using VitalLink.Entities.Messages;
+using VitalLink.Entities.Notifications;
+using VitalLink.Entities.Users;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
 using Volo.Abp.OpenIddict;
@@ -27,6 +30,12 @@ public static class VitalLinkTableNameProvider
         {nameof(BloodRequest),"BloodRequests"},
         {nameof(BloodType),"BloodTypes"},
         {nameof(BloodRequestStatus),"BloodRequestStatuses"},
+        {nameof(Notification),"Notifications"},
+        {nameof(NotificationEventType),"NotificationEventTypes"},
+        {nameof(NotificationTemplate),"NotificationTemplates"},
+        {nameof(ChatMessage),"ChatMessages"},
+        {nameof(UserProfile),"UserProfiles"},
+        {nameof(MessageStatus),"MessageStatuses"},
     };
     
     public static void SetAbpTablePrefix(this ModelBuilder builder)
