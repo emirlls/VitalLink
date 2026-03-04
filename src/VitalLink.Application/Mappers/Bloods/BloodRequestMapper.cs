@@ -21,6 +21,7 @@ public partial class BloodRequestMapper : ITransientDependency
         {
             CreatorId = x.CreatorId,
             BloodTypeId = x.BloodTypeId,
+            Number = x.Number,
             CreatorName = $"{x.IdentityUser.Name} {x.IdentityUser.Surname}",
             BloodTypeName = ((BloodTypes)x.BloodType.Code).GetDescription(),
             Description = x.Description,
