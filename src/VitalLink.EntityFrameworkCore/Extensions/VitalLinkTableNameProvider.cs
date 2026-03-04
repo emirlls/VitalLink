@@ -36,6 +36,7 @@ public static class VitalLinkTableNameProvider
         {nameof(ChatMessage),"ChatMessages"},
         {nameof(UserProfile),"UserProfiles"},
         {nameof(MessageStatus),"MessageStatuses"},
+        {nameof(BloodRequestDonors),"BloodRequestDonors"},
     };
     
     public static void SetAbpTablePrefix(this ModelBuilder builder)

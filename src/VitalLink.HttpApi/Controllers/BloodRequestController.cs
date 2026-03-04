@@ -3,10 +3,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using VitalLink.Dtos;
 using VitalLink.Dtos.Bloods;
-using VitalLink.Services;
+using VitalLink.Filtering.Bloods;
 using VitalLink.Services.Bloods;
+using Volo.Abp.Application.Dtos;
 using Volo.Abp.DependencyInjection;
 
 namespace VitalLink.Controllers;
@@ -40,7 +40,68 @@ public class BloodRequestController : VitalLinkController
         bloodRequest,
         cancellationToken
     );
+    
+    /// <summary>
+    /// Use to became a donor.
+    /// </summary>
+    /// <param name="bloodRequestId"></param>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
+    [HttpPost("{bloodRequestId}")]
+    public async Task<bool> CreateDonorRequestAsync(
+        Guid bloodRequestId,
+        CancellationToken cancellationToken = default
+    ) => await BloodRequestService.CreateDonorRequestAsync(
+        bloodRequestId,
+        cancellationToken
+    );
 
+    /// <summary>
+    /// Use to accept donor request.
+    /// </summary>
+    /// <param name="bloodRequestDonorId"></param>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
+    [HttpPost("{bloodRequestDonorId}/accept")]
+    public async Task<bool> AcceptDonorRequestAsync(
+        Guid bloodRequestDonorId,
+        CancellationToken cancellationToken = default
+    ) => await BloodRequestService.AcceptDonorRequestAsync(
+        bloodRequestDonorId,
+        cancellationToken
+    );
+    
+    /// <summary>
+    /// Use to all blood requests of current user. 
+    /// </summary>
+    /// <param name="bloodRequestFilters"></param>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
+    [HttpGet]
+    public async Task<PagedResultDto<BloodRequestListDto>> GetAllFilteredAsync(
+        [FromQuery]BloodRequestFilters bloodRequestFilters,
+        CancellationToken cancellationToken = default
+    ) => await BloodRequestService
+        .GetAllFilteredAsync(
+            bloodRequestFilters,
+            cancellationToken
+        );
+    /// <summary>
+    /// Use to get suitable blood requests.
+    /// </summary>
+    /// <param name="bloodRequestFilters"></param>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
+    [HttpGet("suitables")]
+    public async Task<PagedResultDto<BloodRequestListDto>> GetSuitableAllFilteredAsync(
+        [FromQuery]BloodRequestFilters bloodRequestFilters,
+        CancellationToken cancellationToken = default
+        ) => await BloodRequestService
+        .GetSuitableAllFilteredAsync(
+            bloodRequestFilters,
+            cancellationToken
+        );
+    
     /// <summary>
     /// Use to update blood request.
     /// </summary>
@@ -60,6 +121,21 @@ public class BloodRequestController : VitalLinkController
     );
     
     /// <summary>
+    /// Use to close blood request.
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
+    [HttpPatch("{id}")]
+    public async Task<bool> CloseRequestAsync(
+        Guid id,
+        CancellationToken cancellationToken = default
+    ) => await BloodRequestService.CloseRequestAsync(
+        id,
+        cancellationToken
+    );
+    
+    /// <summary>
     /// Use to delete blood request.
     /// </summary>
     /// <param name="id"></param>
@@ -73,5 +149,4 @@ public class BloodRequestController : VitalLinkController
         id,
         cancellationToken
     );
-    
 }

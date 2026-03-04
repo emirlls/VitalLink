@@ -61,4 +61,10 @@ public static class ExceptionCodes
         public const string NotFound = $"{Prefix}001";
         public const string AlreadyExists = $"{Prefix}002";
     }
+    public static class BloodRequestDonors
+    {
+        private const string Prefix = $"{ExceptionCodePrefix}BloodRequestDonors:";
+        public const string NotFound = $"{Prefix}001";
+        public const string AlreadyExists = $"{Prefix}002";
+    }
 }

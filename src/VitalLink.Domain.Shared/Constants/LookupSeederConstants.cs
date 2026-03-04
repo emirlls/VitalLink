@@ -66,11 +66,6 @@ public static class LookupSeederConstants
             nameof(New),
             (int)(BloodRequestStatuses.New));
         
-        public static readonly BloodRequestStatusInfo InProgress = new(
-            "34b8f36b-8f43-449a-a86b-011ceb8c7f5b",
-            nameof(InProgress),
-            (int)BloodRequestStatuses.InProgress);
-        
         public static readonly BloodRequestStatusInfo Completed = new(
             "0b2374ec-0040-4d5d-b9a6-5c6333b458c9",
             nameof(Completed),

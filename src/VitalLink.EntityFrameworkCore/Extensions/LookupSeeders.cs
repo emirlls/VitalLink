@@ -54,10 +54,6 @@ public static class LookupSeeders
                 LookupSeederConstants.BloodRequestStatusConstants.New.Name,
                 LookupSeederConstants.BloodRequestStatusConstants.New.Code),
             new BloodRequestStatus(
-                Guid.Parse(LookupSeederConstants.BloodRequestStatusConstants.InProgress.Id),
-                LookupSeederConstants.BloodRequestStatusConstants.InProgress.Name,
-                LookupSeederConstants.BloodRequestStatusConstants.InProgress.Code),
-            new BloodRequestStatus(
                 Guid.Parse(LookupSeederConstants.BloodRequestStatusConstants.Completed.Id),
                 LookupSeederConstants.BloodRequestStatusConstants.Completed.Name,
                 LookupSeederConstants.BloodRequestStatusConstants.Completed.Code)

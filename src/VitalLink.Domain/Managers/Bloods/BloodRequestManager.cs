@@ -30,13 +30,16 @@ public class BloodRequestManager : BaseDomainService<BloodRequest>, IBloodReques
     )
     {
         var geom = bloodRequestModel.GeoJson.ToGeomFromGeoJson();
+        var number = ShortKeyGenerator.GenerateSixCharKey();
         var entity = new BloodRequest(
             GuidGenerator.Create(),
             CurrentTenant.GetId(),
-            currentUserId,
             bloodRequestModel.BloodTypeId,
             bloodRequestModel.Description,
-            geom,DateTime.Now
+            number,
+            geom,
+            DateTime.Now,
+            currentUserId
         )
         {
             StatusId = Guid.Parse(LookupSeederConstants.BloodRequestStatusConstants.New.Id)
@@ -54,5 +57,10 @@ public class BloodRequestManager : BaseDomainService<BloodRequest>, IBloodReques
         bloodRequest.Description = bloodRequestModel.Description;
         bloodRequest.Geom = geom;
         return bloodRequest;
+    }
+
+    public void Close(BloodRequest? bloodRequest)
+    {
+        bloodRequest.StatusId = Guid.Parse(LookupSeederConstants.BloodRequestStatusConstants.Completed.Id);
     }
 }

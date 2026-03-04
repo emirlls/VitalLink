@@ -8,6 +8,7 @@ using VitalLink.Interfaces.Managers.Users;
 using VitalLink.Mappers.Users;
 using VitalLink.Repositories.Users;
 using Volo.Abp.Application.Services;
+using Volo.Abp.Users;
 
 namespace VitalLink.Services.Users;
 
@@ -41,9 +42,24 @@ public class UserService : ApplicationService, IUserService
         return userProfileDto;
     }
 
+    public async Task<UserProfileDto> CreateUserProfileAsync(
+        UserProfileCreateDto userProfileCreateDto,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var model = _userProfileMapper.MapToModel(userProfileCreateDto);
+        var entity = UserProfileManager.Create(
+            model,
+            CurrentUser.GetId()
+        );
+        await UserProfileRepository.InsertAsync(entity, cancellationToken: cancellationToken);
+        var userProfileDto = _userProfileMapper.MapToDto(entity);
+        return userProfileDto;
+    }
+
     public async Task<UserProfileDto> UpdateUserProfileAsync(
         Guid userId,
-        UserProfileUpdateDto userProfileUpdateDto,
+        UserProfileCreateDto userProfileCreateDto,
         CancellationToken cancellationToken = default
     )
     {
@@ -53,7 +69,7 @@ public class UserService : ApplicationService, IUserService
             throwIfNull: true,
             cancellationToken: cancellationToken
         );
-        var updateModel = _userProfileMapper.MapToModel(userProfileUpdateDto);
+        var updateModel = _userProfileMapper.MapToModel(userProfileCreateDto);
         var updatedEntity = UserProfileManager.Update(userProfile, updateModel);
 
         await UserProfileRepository.UpdateAsync(

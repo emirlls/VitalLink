@@ -9,7 +9,7 @@ public static class EventConstants
         public const string UserDelete = nameof(UserDelete);
         public const string UserRegister = nameof(UserRegister);
         public const string CreateUserProfile = nameof(CreateUserProfile);
-        
+        public const string BloodRequestDonorRequest = nameof(BloodRequestDonorRequest);
     }
 
     public static class ServerSentEvents

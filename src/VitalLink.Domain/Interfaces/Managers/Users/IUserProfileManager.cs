@@ -1,3 +1,4 @@
+using System;
 using VitalLink.Entities.Users;
 using VitalLink.Models.Users;
 
@@ -8,5 +9,10 @@ public interface IUserProfileManager : IBaseDomainService<UserProfile>
     UserProfile Update(
         UserProfile userProfile,
         UserProfileUpdateModel updateModel
+    );
+
+    UserProfile Create(
+        UserProfileUpdateModel model,
+        Guid currentUserId
     );
 }

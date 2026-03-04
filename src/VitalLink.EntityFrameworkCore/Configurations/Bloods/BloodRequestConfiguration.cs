@@ -14,11 +14,9 @@ public class BloodRequestConfiguration : IEntityTypeConfiguration<BloodRequest>
         builder.ToTable(builder.GetTableName(),DatabaseConstants.SchemaName);
         builder.ConfigureByConvention();
         
-        builder.Property(x=>x.IsClosed).HasDefaultValue(false);
-        
         builder.HasOne(x => x.IdentityUser)
             .WithMany()
-            .HasForeignKey(x => x.RequesterUserId)
+            .HasForeignKey(x => x.CreatorId)
             .OnDelete(DeleteBehavior.Restrict);
         
         builder.HasOne(x=>x.BloodType)
