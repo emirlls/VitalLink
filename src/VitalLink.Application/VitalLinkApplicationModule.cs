@@ -2,6 +2,9 @@
 using Volo.Abp.Mapperly;
 using Volo.Abp.Modularity;
 using Volo.Abp.Application;
+using Volo.Abp.AspNetCore.SignalR;
+using Volo.Abp.EventBus;
+using Volo.Abp.EventBus.RabbitMq;
 
 namespace VitalLink;
 
@@ -9,7 +12,10 @@ namespace VitalLink;
     typeof(VitalLinkDomainModule),
     typeof(VitalLinkApplicationContractsModule),
     typeof(AbpDddApplicationModule),
-    typeof(AbpMapperlyModule)
+    typeof(AbpMapperlyModule),
+    typeof(AbpEventBusModule),
+    typeof(AbpEventBusRabbitMqModule),
+    typeof(AbpAspNetCoreSignalRModule)
     )]
 public class VitalLinkApplicationModule : AbpModule
 {

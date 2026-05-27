@@ -19,7 +19,53 @@
     "BloodTypes:07":"0 Rh-",
 
     "BloodRequestStatuses:00": "New",
-    "BloodRequestStatuses:01": "In Progress",
-    "BloodRequestStatuses:02": "Completed"
+    "BloodRequestStatuses:01": "Completed",
+    
+    "MessageStatuses:00": "Sent",
+    "MessageStatuses:01": "Read",
+
+    "VitalLink:ExceptionCodes:BloodRequests:001": "Blood request not found.",
+    "VitalLink:ExceptionCodes:BloodRequests:002": "Blood request already exists.",
+
+    "VitalLink:ExceptionCodes:BloodTypes:001": "Blood type not found.",
+    "VitalLink:ExceptionCodes:BloodTypes:002": "Blood type already exists.",
+
+    "VitalLink:ExceptionCodes:IdentityUser:001": "User not found.",
+    "VitalLink:ExceptionCodes:IdentityUser:002": "User already exists.",
+    "VitalLink:ExceptionCodes:IdentityUser:003": "Your email address has not been confirmed.",
+    "VitalLink:ExceptionCodes:IdentityUser:004": "This mail address is in use.",
+    "VitalLink:ExceptionCodes:IdentityUser:005": "This mail address is invalid.",
+    "VitalLink:ExceptionCodes:IdentityUser:006": "Username is in use.",
+
+    "VitalLink:ExceptionCodes:NotificationTemplate:001": "Notification template not found.",
+    "VitalLink:ExceptionCodes:NotificationTemplate:002": "Notification template already exists.",
+
+    "VitalLink:ExceptionCodes:NotificationEventType:001": "Notification event type not found.",
+    "VitalLink:ExceptionCodes:NotificationEventType:002": "Notification event type already exists.",
+
+    "VitalLink:ExceptionCodes:Mail:001": "Mail settings not found.",
+
+    "VitalLink:ExceptionCodes:ChatMessage:001": "Message not found.",
+    "VitalLink:ExceptionCodes:ChatMessage:002": "Message already exists.",
+    
+    "VitalLink:ExceptionCodes:UserProfile:001": "User profile not found.",
+    "VitalLink:ExceptionCodes:UserProfile:002": "User profile already exists.",
+
+    "VitalLink:ExceptionCodes:BloodRequestDonors:001": "Donor not found.",
+    "VitalLink:ExceptionCodes:BloodRequestDonors:002": "Donor already exists.",
+    
+    //Permissions
+    "User.Default": "User Operations",
+    "User.Create": "User Create",
+    "User.Update": "User Update",
+    "User.Delete": "User Delete",
+    "User.Export": "User Export",
+
+
+    "Message.Default": "Message Operations",
+    "Message.Create": "Message Create",
+    "Message.Update": "Message Update",
+    "Message.Delete": "Message Delete",
+    "Message.Export": "Message Export"
   }
 }

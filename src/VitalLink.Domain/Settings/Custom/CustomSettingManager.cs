@@ -1,0 +1,77 @@
+using System;
+using System.ComponentModel;
+using System.Reflection;
+using System.Threading;
+using System.Threading.Tasks;
+using VitalLink.Constants;
+using Volo.Abp.Json;
+using Volo.Abp.SettingManagement;
+using Volo.Abp.Settings;
+
+namespace VitalLink.Settings.Custom;
+
+public class CustomSettingManager<TSetting> : ICustomSettingManager<TSetting>
+where TSetting : class
+{
+    private readonly ISettingManager _settingManager;
+    private readonly ISettingDefinitionManager _settingDefinitionManager;
+    private readonly IJsonSerializer _jsonSerializer;
+
+    public CustomSettingManager(
+        IJsonSerializer jsonSerializer,
+        ISettingManager settingManager,
+        ISettingDefinitionManager settingDefinitionManager
+    )
+    {
+        _jsonSerializer = jsonSerializer;
+        _settingManager = settingManager;
+        _settingDefinitionManager = settingDefinitionManager;
+    }
+
+    private string GetSettingName(string description) => $"{SettingConstants.Prefix}{description}";
+    
+    public async Task SetAsync(TSetting setting, CancellationToken cancellationToken = default)
+    {
+        var description = typeof(TSetting).GetCustomAttribute<DescriptionAttribute>()?.Description 
+                          ?? typeof(TSetting).Name;
+        var settingName = GetSettingName(description);
+        var jsonValue = _jsonSerializer.Serialize(setting, camelCase:false);
+        await _settingManager.SetGlobalAsync(settingName, jsonValue);
+    }
+
+    public async Task<TSetting?> GetAsync<TSettingModel>(CancellationToken cancellationToken = default)
+    where TSettingModel : class
+    {
+        var description = typeof(TSettingModel).GetCustomAttribute<DescriptionAttribute>()?.Description 
+                          ?? typeof(TSettingModel).Name;
+        var settingName = GetSettingName(description);
+        var settings = await _settingManager.GetOrNullGlobalAsync(settingName);
+        if (settings.IsNullOrWhiteSpace()) return null;
+        var model  = _jsonSerializer.Deserialize<TSetting>(settings, camelCase:false);
+        return model;
+    }
+
+    public async Task<string> GetSerializedSettingAsync(
+        TSetting settings,
+        CancellationToken cancellationToken = default
+    )
+    {
+        var jsonValue = _jsonSerializer.Serialize(settings);
+        return jsonValue;
+    }
+
+    public async Task<bool> ExistsAsync(TSetting setting, CancellationToken cancellationToken = default)
+    {
+        var description = typeof(TSetting).GetCustomAttribute<DescriptionAttribute>()?.Description 
+                          ?? typeof(TSetting).Name;
+        var settingName = GetSettingName(description);
+        var settingDefinition = await _settingDefinitionManager.GetOrNullAsync(settingName);
+        if (settingDefinition is null)
+        {
+            return false;
+        }
+        var settings = await _settingManager.GetOrNullGlobalAsync(settingName);
+        return !settings.IsNullOrWhiteSpace();
+    }
+    
+}

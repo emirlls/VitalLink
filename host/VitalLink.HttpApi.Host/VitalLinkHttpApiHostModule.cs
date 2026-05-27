@@ -33,6 +33,8 @@ using Volo.Abp.Caching;
 using Volo.Abp.Caching.StackExchangeRedis;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.PostgreSql;
+using Volo.Abp.EventBus.Distributed;
+using Volo.Abp.EventBus.RabbitMq;
 using Volo.Abp.Identity.AspNetCore;
 using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
@@ -64,7 +66,12 @@ public class VitalLinkHttpApiHostModule : AbpModule
     {
         var hostingEnvironment = context.Services.GetHostingEnvironment();
         var configuration = context.Services.GetConfiguration();
-
+        Configure<AbpDistributedEventBusOptions>(options => { });
+        Configure<AbpRabbitMqEventBusOptions>(options =>
+        {
+            options.ClientName = configuration["DistributedEventBus:ClientName"]!;
+            options.ExchangeName = configuration["DistributedEventBus:ExchangeName"]!;
+        });
         Configure<AbpDbContextOptions>(options =>
         {
             options.UseNpgsql();

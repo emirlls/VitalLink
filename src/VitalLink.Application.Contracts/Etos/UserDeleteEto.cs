@@ -1,0 +1,13 @@
+using VitalLink.Constants;
+using Volo.Abp.Domain.Entities.Events.Distributed;
+using Volo.Abp.EventBus;
+
+namespace VitalLink.Etos;
+
+[EventName(EventConstants.EventBus.UserDelete)]
+public class UserDeleteEto : EtoBase
+{
+    public string Name { get; set; }
+    public string Surname { get; set; }
+    public string Email { get; set; } 
+}

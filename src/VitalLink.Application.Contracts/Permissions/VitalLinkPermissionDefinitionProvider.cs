@@ -8,10 +8,9 @@ public class VitalLinkPermissionDefinitionProvider : PermissionDefinitionProvide
 {
     public override void Define(IPermissionDefinitionContext context)
     {
-        var myGroup = context.AddGroup(VitalLinkPermissions.GroupName, L("Permission:VitalLink"));
     }
 
-    private static LocalizableString L(string name)
+    protected static LocalizableString L(string name)
     {
         return LocalizableString.Create<VitalLinkResource>(name);
     }
