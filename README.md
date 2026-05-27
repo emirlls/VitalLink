@@ -18,7 +18,7 @@ VitalLink is a highly scalable, event-driven enterprise backend application deve
 - **Message Broker:** RabbitMQ (Distributed Event Bus)
 - **Real-Time Communication:** SignalR
 - **Caching:** Redis Distributed Cache
-- **ORM & Database:** Entity Framework Core
+- **ORM & Database:** Entity Framework Core, PostgreSQL
 
 
 
