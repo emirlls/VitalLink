@@ -19,3 +19,14 @@ VitalLink is a highly scalable, event-driven enterprise backend application deve
 - **Real-Time Communication:** SignalR
 - **Caching:** Redis Distributed Cache
 - **ORM & Database:** Entity Framework Core
+
+
+
+## 📸 Screen Designs / Arayüz Tasarımları
+
+<div flex-direction="row" style="display: flex; gap: 16px; align-items: center; justify-content: center; flex-wrap: wrap;">
+  <img width="260" alt="VitalLink Mobile UI" src="https://github.com/user-attachments/assets/b154a6f0-ece1-43af-8546-bf2374081d77" style="border-radius: 12px; border: 1px solid #e1e4e8; shadow: 0px 4px 12px rgba(0,0,0,0.05);" />
+  
+  <img width="500" alt="VitalLink Web Dashboard" src="https://github.com/user-attachments/assets/7e6fb744-083a-4946-8721-966e90a8d554" style="border-radius: 12px; border: 1px solid #e1e4e8; shadow: 0px 4px 12px rgba(0,0,0,0.05);" />
+</div>
+
